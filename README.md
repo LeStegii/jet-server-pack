@@ -12,3 +12,5 @@ You can either select Forge or Crucible depending if you need bukkit plugins or 
 ### Important!
 
 This server restarts automatically after 10 seconds. If you want to stop the server, type `stop` into the console and press `ctrl` and `c` during the cooldown.
+
+This server pack contains a modifed version of the TeamAOF [ServerStarter](https://github.com/TeamAOF/ServerStarter).
