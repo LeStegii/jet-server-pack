@@ -1,0 +1,62 @@
+_specver: 2
+
+modpack:
+  name: JET
+  description: Battle Modpack with guns, jets and helicopters
+  
+install:
+  mcVersion: 1.7.10
+  loaderVersion: ~
+  modpackUrl: https://media.forgecdn.net/files/3295/873/Minecraft+JET-2.5.1+Classic.zip
+  installerUrl: https://github.com/CrucibleMC/Crucible/releases/download/v5.1/Crucible-1.7.10-5.1.jar
+  
+  # Ignore resources
+  ignoreFiles:
+    - resources/**
+    
+  additionalFiles:
+  localFiles: ~
+  
+  installerArguments: []
+  modpackFormat: curse
+  
+  # Ignore client side mods
+  formatSpecific:
+    ignoreProject:
+    - 226447 # Resource Loader
+    - 226406 # Custom Main Menu
+    - 228529 # Better Foliage
+    - 229876 # BetterFPS
+    - 237701 # ReAuth
+    - 238891 # DynamicSurroundings
+    - 242677 # FastCraft
+    
+  baseInstallPath: ~
+  checkFolder: yes
+  installLoader: yes
+  runInstaller: no
+  installLibraries: yes
+  libraries: https://github.com/CrucibleMC/Crucible/releases/download/v5.1/libraries.zip
+  spongeBootstrapper: ~
+
+launch:
+  # specifies the max amount of ram the server is supposed to launch with (Xmx)
+  maxRam: 4G
+  # specifies the minimal amount of ram the server is supposed to launch with (Xms)
+  minRam: 4G
+  # specifies whether the server is supposed to auto restart after crash
+  autoRestart: yes
+  javaArgs:
+    - "-server"
+    - "-noverify" # Needed because Crucible is compiled with Java 8, causing problems with old coremods
+    
+  spongefix: no
+  ramDisk: no
+  checkOffline: no
+  crashLimit: 10
+  crashTimer: 60min
+  preJavaArgs: ~
+  startFile: Crucible-1.7.10-5.1.jar
+  forcedJavaPath: ~
+
+
